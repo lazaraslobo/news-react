@@ -1,0 +1,49 @@
+.app-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030; // Ensure the navbar is above other content
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Add subtle shadow for better visibility
+
+  .navbar {
+    padding: 0.5rem 1rem; // Adjust padding as needed
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem; // Increase font size for better visibility
+    font-weight: bold; // Make brand name bold
+  }
+
+  .navbar-toggler {
+    border-color: transparent; // Remove border from toggler
+    .navbar-toggler-icon {
+      background-image: url('data:image/svg+xml;charset=utf8,...'); // You can customize the icon if needed
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      margin-left: 1rem; // Add space between nav items
+
+      .nav-link {
+        font-size: 1rem; // Adjust font size
+        color: #333; // Adjust text color
+        &:hover {
+          color: #007bff; // Change color on hover
+          text-decoration: underline; // Add underline on hover
+        }
+      }
+
+      &.active .nav-link {
+        color: #007bff; // Active link color
+        font-weight: bold; // Make active link bold
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .navbar-brand {
+      font-size: 1.25rem; // Adjust font size for mobile view
+    }
+  }
+}

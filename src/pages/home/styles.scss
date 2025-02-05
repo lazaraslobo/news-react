@@ -1,0 +1,58 @@
+.home-page-container {
+    margin: 4rem 0;
+    height: 100vh;
+    //background: rgba(255, 255, 255, 0.78);
+    .left-panel-section {
+        height: 100vh;
+        overflow-y: auto;
+        @media (max-width: 992px) {
+            height: auto;
+            overflow-y: auto;
+        }
+    }
+
+    .search-bar{
+        .input-container{
+            width: 100%;
+            .search-bar{
+                border-radius: 20px;
+                padding: 0.8rem 2rem;
+                font-size: 1.25rem;
+                border: none;
+                border-bottom: solid 3px red;
+            }
+        }
+    }
+
+    .view-more-cta{
+        padding: 0.5rem 5rem;
+        border-radius: 40px;
+        background: #f88483;
+        color: white;
+        border: unset;
+        font-weight: 700;
+    }
+    .preferences-cta, .preferences-cta-reset{
+        background: #33c100;
+        padding: 5px 10px;
+        border-radius: 30px;
+        color: white;
+        font-weight: 500;
+        font-size: 0.8rem;
+    }
+
+    .preferences-cta-reset{
+        background: #e53131;
+    }
+
+    .date-filter-container{
+        span{
+            color: white;
+        }
+    }
+
+    .no-results{
+        color: white;
+        font-size: 1.2rem;
+    }
+}

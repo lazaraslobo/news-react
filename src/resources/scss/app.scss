@@ -1,0 +1,89 @@
+body{
+    background-image: url('/resources/images/news-backdrop.png');
+    background-size: contain; /* or 'cover', depending on your preference */
+    background-repeat: repeat;
+    background-position: center;
+    background-color: rgba(14, 14, 14, 0.71); /* Semi-transparent overlay color */
+    background-blend-mode: overlay;
+
+    #app-root{
+        min-height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .heading{
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-block{
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+
+        &:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+    }
+
+    @keyframes fadeInScale {
+        from {
+            opacity: 0;
+            transform: scale(0.999);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    * {
+        animation: fadeInScale 0.2s ease-out;
+        animation-fill-mode: both;
+    }
+
+    .Toastify{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        align-items: center;
+        width: 100%;
+        top: 2rem;
+        z-index: 999999;
+        .Toastify__toast-container{
+            position: unset;
+            padding: 1rem;
+        }
+    }
+
+    /* For Webkit browsers (Chrome, Safari, Edge) */
+    ::-webkit-scrollbar {
+        width: 8px; /* Adjust width for horizontal scrollbar as well */
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Light grey background */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #888; /* Darker grey for the thumb */
+        border-radius: 4px; /* Rounded corners */
+
+        &:hover {
+            background: #555; /* Dark grey on hover */
+        }
+    }
+
+    /* For Firefox */
+    .scrollable-element {
+        scrollbar-width: thin; /* Make scrollbar thinner */
+        scrollbar-color: #888 #f1f1f1; /* thumb color and track color */
+    }
+
+    /* For other elements to apply scrollbar styling */
+    .scrollable-element {
+        overflow: auto; /* Ensure scrollbar is visible */
+    }
+
+}
